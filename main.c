@@ -6,16 +6,16 @@ int main(void)
 {
     int i;
     int grade[SIZE];
-    int sum;
-    int average;
+    int score[SIZE];
 
-    printf("input 5 student's score :\n");
-    sum=0;
     for(i=0; i<SIZE; i++)
-    {   scanf("%d", &grade[i]);
-        sum += grade[i];
+    {    grade[i]=rand()%100;
+        printf("grade[%d]=%d\n", i, grade[i]);
     }
-    average = sum/SIZE;
-    printf("average = %d\n", average);
+    for(i=0; i<SIZE; i++)
+        score[i]=grade[i];
+
+    for(i=0;i<SIZE;i++)
+        printf("score[%d]=%d\n", i, score[i]);
     return 0;
 }
